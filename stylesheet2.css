@@ -1,0 +1,30 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    text-transform:uppercase;
+}
+
+#outer{
+   font-size: 25px;
+   height: 200px;
+   background-color: pink;
+   border-width: 7px;
+   border-style: solid;
+      text-align: center;
+
+}
+
+#inner{
+    font-size: 10px;
+    background-color: blue;
+    height: 78px;
+   width: 80px;
+    /* border-width: 7px;
+   border-style: solid;
+   border-color: cadetblue; */
+   text-align: center;
+   border: 7px solid black;
+ 
+}

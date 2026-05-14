@@ -6,7 +6,7 @@ let msg = document.querySelector("#msg");
 
 
 let turnO=true;
-
+let count = 0;
 const winPatterns =[
     [0,1,2],
     [0,3,6],
@@ -39,10 +39,13 @@ boxes.forEach((box)=>{
           turnO= true;
     }
     box.disabled = true;
-    checkWinner();
+    let isWinner = checkWinner();
+       if(!isWinner &&count===9){
+           drawmatch();
+       }
    });
 });
-console.log(count);
+
 const disabledBoxes =()=>{
     for (let box of boxes) {
         box.disabled =true;
@@ -60,6 +63,11 @@ const showWinner = (Winner) =>{
     msgContainer.classList.remove("hide");
     disabledBoxes();
 };
+const drawmatch = ()=>{
+    msg.innerText=`the match was a draw`.toUpperCase();
+    msgContainer.classList.remove("hide");
+     disabledBoxes();
+}
 const checkWinner = () => {
     for(let patterns of winPatterns){
        let posVal1 = boxes[patterns[0]].innerText;
@@ -70,6 +78,7 @@ const checkWinner = () => {
         if (posVal1 === posVal2 && posVal2 === posVal3) {
            
             showWinner(posVal1);
+            return true;
         }
     }
     }

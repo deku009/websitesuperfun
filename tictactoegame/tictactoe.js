@@ -69,7 +69,7 @@ const showWinner = (Winner) =>{
 };
 
 const drawmatch = ()=>{
-    msg.innerText=`the match was a draw`.toUpperCase;
+    msg.innerText=`the match was a draw`.toUpperCase();
     msgContainer.classList.remove("hide");
      disabledBoxes();
 }

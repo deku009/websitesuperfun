@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #44907C;
+    background-color: #549099;
     text-align: center;
 }
 
@@ -34,8 +34,8 @@ body{
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
     font-size: 8vmin;
-    color:#6A3043;
-    background-color: #2B2D42;
+    color:#A43D47;
+    background-color: #FFB468;
 }
 
 #reset-btn{
